@@ -8,5 +8,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    """Main page route"""
     return render_template('index.html')
+
+app.add_url_rule('/', 'index', index)
